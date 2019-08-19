@@ -14,6 +14,7 @@ GridLayout {
         Rectangle {
 			Layout.fillHeight: true;
 			Layout.fillWidth: true;
+			color: "transparent"
             Image {
                 source: "../images/a.png";
 				Layout.fillHeight: true;
