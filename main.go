@@ -29,7 +29,7 @@ func main() {
 	// set the window title to "Hello QML/Quick Example"
 	// and let the root item of the view resize itself to the size of the view automatically
 	view := quick.NewQQuickView(nil)
-	view.SetMinimumSize(core.NewQSize2(600, 300))
+	view.SetMinimumSize(core.NewQSize2(800, 600))
 	view.SetResizeMode(quick.QQuickView__SizeRootObjectToView)
 	view.SetTitle("Hello QML/Quick Example")
 
