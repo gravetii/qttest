@@ -1,22 +1,13 @@
-import QtQuick 2.12
-import QtQuick.Layouts 1.1
-import QtGraphicalEffects 1.12
+import QtQuick 2.10				//Item
+import QtQuick.Controls 2.3		//Button
 
-Rectangle {
-	id: root
-	Image {
-		id: backImg
-		source: "../images/motley.jpg"
-		fillMode: Image.Stretch
+Item {
+	width: 250
+	height: 200
+
+	Button {
 		anchors.fill: parent
-	}
-	GameGrid {
-		id: gameGrid
-	}
-	Blend {
-		anchors.fill: gameGrid
-		source: gameGrid
-		foregroundSource: backImg
-		mode: "multiply"
+		text: ctxObject.someString
+		onClicked: ctxObject.clicked()
 	}
 }

@@ -5,28 +5,29 @@ import QtGraphicalEffects 1.12
 GridLayout {
 	rows: 4
 	columns: 4
-	rowSpacing: 0; columnSpacing: 0
+	rowSpacing: 0;columnSpacing: 0
 	anchors.fill: parent
 	Layout.fillHeight: true
-    Layout.fillWidth: true
-    Repeater {
-        model: 16
-        Rectangle {
+	Layout.fillWidth: true
+	Repeater {
+		model: 16
+		Rectangle {
 			Layout.fillHeight: true
 			Layout.fillWidth: true
 			color: "transparent"
-            Image {
+			Image {
 				id: alphaImg
-                source: "../images/a.png"
+				source: "../images/a.png"
 				Layout.fillHeight: true
 				Layout.fillWidth: true
 				anchors.fill: parent
-                MouseArea {
-                    anchors.fill: parent
-                    hoverEnabled: true
+
+				MouseArea {
+					anchors.fill: parent
+					hoverEnabled: true
 					cursorShape: Qt.PointingHandCursor
-                }
-            }
-        }
-    }
+				}
+			}
+		}
+	}
 }
