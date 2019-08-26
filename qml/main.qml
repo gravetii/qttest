@@ -5,10 +5,13 @@ import QtQuick.Controls 2.12
 
 Rectangle {
   id:root
-  Column {
-    spacing: 40
+  Row {
+    spacing: 10
     FileSearch {
       id: fileSearch
+    }
+    LogArea {
+      id: logArea
     }
   }
 }
