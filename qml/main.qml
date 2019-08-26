@@ -11,4 +11,7 @@ Rectangle {
     FileSearch {
       id: fileSearch
     }
+    DownloadsList {
+      id: downloadsList
+    }
 }
