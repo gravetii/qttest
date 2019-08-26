@@ -4,9 +4,11 @@ import QtGraphicalEffects 1.12
 import QtQuick.Controls 2.12
 
 Rectangle {
+  width: 1200
+  height: 750
   id:root
   Row {
-    spacing: 10
+    spacing: 300
     FileSearch {
       id: fileSearch
     }
