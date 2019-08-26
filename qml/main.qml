@@ -6,6 +6,9 @@ import QtQuick.Controls 2.12
 Rectangle {
     id:root
     LogArea {
-		id: log
-	}
+		  id: log
+	  }
+    FileSearch {
+      id: fileSearch
+    }
 }
