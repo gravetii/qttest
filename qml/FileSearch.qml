@@ -4,8 +4,8 @@ import QtGraphicalEffects 1.12
 import QtQuick.Controls 2.3
 
 Rectangle {
-    width: 200
-    height: 200
+    width: 325
+    height: 300
     Column {
         spacing: 25
         Row {

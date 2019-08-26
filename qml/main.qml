@@ -7,13 +7,16 @@ Rectangle {
   width: 1200
   height: 750
   id:root
-  Row {
-    spacing: 200
+  RowLayout {
+    anchors.fill: parent
     FileSearch {
       id: fileSearch
+      Layout.fillHeight: true
     }
     LogArea {
       id: logArea
+      Layout.fillHeight: true
+      Layout.fillWidth: true
     }
   }
 }

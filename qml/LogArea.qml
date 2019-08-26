@@ -5,12 +5,9 @@ import QtQuick.Controls 2.3
 import QtQuick.Controls.Styles 1.4
 
 Rectangle {
-    width: 500
-    height: 500
     border.color: "#D3D3D3"
     border.width: 1
     TextArea {
-        anchors.fill: parent
         readOnly: true
         textMargin: 10, 10, 10, 10
         text: "Welcome to diztl!"
