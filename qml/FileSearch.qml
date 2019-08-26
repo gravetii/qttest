@@ -13,7 +13,7 @@ Rectangle {
             y: 20
             spacing: 20
             TextField {
-                width: 300
+                width: 200
                 height: 50
                 id: searchBox
                 placeholderText: "Search..."
@@ -33,7 +33,7 @@ Rectangle {
             spacing: 10
             ComboBox {
                 currentIndex: 0
-                width: 200
+                width: 100
                 height: 50
                 model: ["At least", "Less than"]
             }
@@ -56,7 +56,7 @@ Rectangle {
             spacing: 10
             ComboBox {
                 currentIndex: 0
-                width: 400
+                width: 300
                 height: 50
                 model: [
                     "Any",

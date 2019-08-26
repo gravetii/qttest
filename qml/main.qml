@@ -8,7 +8,7 @@ Rectangle {
   height: 750
   id:root
   Row {
-    spacing: 300
+    spacing: 200
     FileSearch {
       id: fileSearch
     }
