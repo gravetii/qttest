@@ -4,14 +4,11 @@ import QtGraphicalEffects 1.12
 import QtQuick.Controls 2.12
 
 Rectangle {
-    id:root
-    LogArea {
-		  id: log
-	  }
+  id:root
+  Column {
+    spacing: 40
     FileSearch {
       id: fileSearch
     }
-    DownloadsList {
-      id: downloadsList
-    }
+  }
 }
