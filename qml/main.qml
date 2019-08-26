@@ -12,11 +12,17 @@ Rectangle {
     FileSearch {
       id: fileSearch
       Layout.fillHeight: true
+      Layout.preferredHeight: 300
     }
     LogArea {
       id: logArea
       Layout.fillHeight: true
       Layout.fillWidth: true
     }
+    // DownloadsList {
+    //   id: downloadsList
+    //   Layout.fillWidth: true
+    // }
+    
   }
 }
