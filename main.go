@@ -31,7 +31,7 @@ func main() {
 	view := quick.NewQQuickView(nil)
 	view.SetMinimumSize(core.NewQSize2(600, 300))
 	view.SetResizeMode(quick.QQuickView__SizeRootObjectToView)
-	view.SetTitle("Hello QML/Quick Example")
+	view.SetTitle("Diztl")
 
 	// load the embedded qml file
 	// created by either qtrcc or qtdeploy

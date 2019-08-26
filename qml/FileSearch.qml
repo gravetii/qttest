@@ -33,7 +33,7 @@ Rectangle {
             spacing: 10
             ComboBox {
                 currentIndex: 0
-                width: 100
+                width: 120
                 height: 50
                 model: ["At least", "Less than"]
             }
@@ -45,7 +45,7 @@ Rectangle {
             }
             ComboBox {
                 currentIndex: 1
-                width: 100
+                width: 80
                 height: 50
                 model: ["kB", "MB", "GB"]
             }
