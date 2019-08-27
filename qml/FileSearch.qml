@@ -13,9 +13,9 @@ Rectangle {
             y: 20
             spacing: 20
             TextField {
+                id: searchBox
                 width: 200
                 height: 50
-                id: searchBox
                 placeholderText: "Search..."
                 color: "#000000"
                 selectionColor: "steelblue"
@@ -25,6 +25,15 @@ Rectangle {
                 width: 80
                 height: 45
                 text: "Go!"
+                onClicked: search()
+                function search() {
+                    var text = searchBox.text.trim()
+                    if (text != "") {
+                        qmlBridge.search(text)
+                    } else {
+                        searchBox.text = ""
+                    }
+                }
             }
         }
 

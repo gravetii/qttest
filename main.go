@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/therecipe/qt/core"
@@ -8,6 +9,23 @@ import (
 	"github.com/therecipe/qt/quickcontrols2"
 	"github.com/therecipe/qt/widgets"
 )
+
+// QmlBridge to communicate with the frontend.
+type QmlBridge struct {
+	core.QObject
+	_ func()            `constructor:"init"`
+	_ func(term string) `slot:"search"`
+}
+
+func (qmlBridge *QmlBridge) init() {
+	fmt.Println("Initialising QmlBridge")
+}
+
+func (qmlBridge *QmlBridge) configure() {
+	qmlBridge.ConnectSearch(func(term string) {
+		fmt.Println("Searching for string: ", term)
+	})
+}
 
 func main() {
 
@@ -32,6 +50,9 @@ func main() {
 	view.SetMinimumSize(core.NewQSize2(600, 300))
 	view.SetResizeMode(quick.QQuickView__SizeRootObjectToView)
 	view.SetTitle("Diztl")
+	var qmlBridge = NewQmlBridge(nil)
+	qmlBridge.configure()
+	view.RootContext().SetContextProperty("qmlBridge", qmlBridge)
 
 	// load the embedded qml file
 	// created by either qtrcc or qtdeploy
