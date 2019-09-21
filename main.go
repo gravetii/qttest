@@ -28,7 +28,6 @@ func (qmlBridge *QmlBridge) configure() {
 }
 
 func main() {
-
 	// enable high dpi scaling
 	// useful for devices with high pixel density displays
 	// such as smartphones, retina displays, ...
