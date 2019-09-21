@@ -7,13 +7,17 @@ import QtQuick.Controls.Styles 1.4
 TabView {
     tabPosition: Qt.BottomEdge
     style: TabViewStyle {
+        tabOverlap: 1
         frameOverlap: 1
-        tabsAlignment: Qt.AlignHCenter
+        tabBar: Rectangle {
+            color: "#D3D3D3"
+        }
+        tabsAlignment: Qt.AlignLeft
         tab: Rectangle {
             color: styleData.selected ? "steelblue" : "lightsteelblue"
             border.color: "steelblue"
             implicitWidth: Math.max(text.width + 4, 80)
-            implicitHeight: 20
+            implicitHeight: 25
             radius: 2
             Text {
                 id: text
@@ -27,30 +31,20 @@ TabView {
         }
     }
     Tab {
+        title: "log"
+        LogArea {
+            id: logArea
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+        }
+    }
+    Tab {
         id: redTab
         title: "Red"
         Rectangle {
             width: redTab.width
             height: redTab.height
             color: "red"
-        }
-    }
-    Tab {
-        id: greenTab
-        title: "Green"
-        Rectangle {
-            width: greenTab.width
-            height: greenTab.height
-            color: "green"
-        }
-    }
-    Tab {
-        id: blueTab
-        title: "Blue"
-        Rectangle {
-            width: blueTab.width
-            height: blueTab.height
-            color: "blue"
         }
     }
 }
