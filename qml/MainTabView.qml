@@ -15,7 +15,7 @@ TabView {
         tabsAlignment: Qt.AlignLeft
         tab: Rectangle {
             color: styleData.selected ? "steelblue" : "lightsteelblue"
-            border.color: "steelblue"
+            border.color: "#D3D3D3"
             implicitWidth: Math.max(text.width + 4, 80)
             implicitHeight: 25
             radius: 2

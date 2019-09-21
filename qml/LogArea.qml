@@ -9,7 +9,7 @@ Rectangle {
     border.width: 1
     TextArea {
         readOnly: true
-        textMargin: 5, 5, 5, 5
+        textMargin: 10, 10, 10, 10
         text: "Welcome to diztl!"
         selectByMouse: true
         color: "#000000"
