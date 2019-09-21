@@ -19,10 +19,5 @@ Rectangle {
       Layout.fillHeight: true
       Layout.fillWidth: true
     }
-    // DownloadsList {
-    //   id: downloadsList
-    //   Layout.fillWidth: true
-    // }
-    
   }
 }
