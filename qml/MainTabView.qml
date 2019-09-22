@@ -39,15 +39,6 @@ TabView {
         }
     }
     Tab {
-        id: redTab
-        title: "Red"
-        Rectangle {
-            width: redTab.width
-            height: redTab.height
-            color: "red"
-        }
-    }
-    Tab {
         id: resultListTab
         title: "Result list"
         ResultList {

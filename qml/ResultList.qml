@@ -5,11 +5,15 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 Rectangle {
+    id: rootRect
     TableView {
         anchors.fill: parent
         rowDelegate: Rectangle {
-            color: styleData.row % 2 == 0 ? "#D3D3D3" : "#FFFFFF"
-            height: 20
+            color: "#D3D3D3"
+            height: 30
+            MouseArea {
+                anchors.fill: parent
+            }
         }
 
         itemDelegate: Rectangle {
@@ -40,12 +44,12 @@ Rectangle {
         TableViewColumn {
             role: "title"
             title: "Title"
-            // width: 100
+            width: rootRect.width/2
         }
         TableViewColumn {
             role: "author"
             title: "Author"
-            // width: 200
+            width: rootRect.width/2
         }
         model: libraryModel
     }
