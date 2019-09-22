@@ -47,4 +47,13 @@ TabView {
             color: "red"
         }
     }
+    Tab {
+        id: resultListTab
+        title: "Result list"
+        ResultList {
+            id: resultListTab
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+        }
+    }
 }
