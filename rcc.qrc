@@ -7,5 +7,6 @@
 <file>qml/MainTabBar.qml</file>
 <file>qml/MainTabView.qml</file>
 <file>qml/ResultList.qml</file>
+<file>qml/ResultListDataModel.qml</file>
 </qresource>
 </RCC>
