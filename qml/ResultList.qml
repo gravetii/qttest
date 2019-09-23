@@ -23,9 +23,11 @@ Rectangle {
             border.width: 1
             Text {
                 id: textItem
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.horizontalCenter: parent.horizontalCenter
                 text: styleData.value
+                anchors.fill: parent
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+                elide: Text.ElideRight
             }
         }
 
@@ -35,45 +37,51 @@ Rectangle {
             color: "lightsteelblue"
             Text {
                 id: textItem
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.centerIn: parent
                 text: styleData.value
                 elide: Text.ElideRight
-                renderType: Text.NativeRendering
             }
         }
         
         TableViewColumn {
-            role: "title"
-            title: "Title"
-            width: rootRect.width/2
+            role: "file"
+            title: "File"
+            width: rootRect.width * 0.3
             movable: false
             resizable: false
         }
         TableViewColumn {
-            role: "author"
-            title: "Author"
-            width: rootRect.width/2
+            role: "type"
+            title: "Type"
+            width: rootRect.width * 0.2
+            movable: false
+            resizable: false
+        }
+        TableViewColumn {
+            role: "size"
+            title: "Size"
+            width: rootRect.width * 0.2
+            movable: false
+            resizable: false
+        }
+        TableViewColumn {
+            role: "path"
+            title: "Path"
+            width: rootRect.width * 0.3
             movable: false
             resizable: false
         }
 
-        model: libraryModel
+        model: resultListModel
     }
 
     ListModel {
-    id: libraryModel
-    ListElement {
-        title: "A Masterpiece"
-        author: "Gabriel"
+        id: resultListModel
+        ListElement {
+            file: "solee_bonkers.mp4"
+            size: "123M"
+            type: ".mp4"
+            path: "/Users/s0d01bw/Documents/diztl/share"
+        }
     }
-    ListElement {
-        title: "Brilliance"
-        author: "Jens"
-    }
-    ListElement {
-        title: "Outstanding"
-        author: "Frederik"
-    }
-}
 }
