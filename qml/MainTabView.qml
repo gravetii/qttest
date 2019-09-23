@@ -16,7 +16,7 @@ TabView {
         tab: Rectangle {
             color: styleData.selected ? "steelblue" : "lightsteelblue"
             border.color: "#D3D3D3"
-            implicitWidth: Math.max(text.width + 4, 80)
+            implicitWidth: Math.max(text.width + 10, 80)
             implicitHeight: 25
             radius: 2
             Text {
@@ -42,7 +42,14 @@ TabView {
         id: resultListTab
         title: "Result list"
         ResultList {
-            id: resultListTab
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+        }
+    }
+    Tab {
+        id: downloadsListTab
+        title: "Downloads list"
+        DownloadsList {
             Layout.fillHeight: true
             Layout.fillWidth: true
         }
