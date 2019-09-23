@@ -17,11 +17,12 @@ Rectangle {
         }
 
         itemDelegate: Rectangle {
-            implicitWidth: 100
-            implicitHeight: 50
+            width: 100
+            height: 50
             border.color: "#000000"
             border.width: 1
             Text {
+                id: textItem
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: styleData.value
@@ -29,15 +30,16 @@ Rectangle {
         }
 
         headerDelegate: Rectangle {
-            implicitWidth: 100
-            implicitHeight: 40
-            border.color: "#000000"
-            border.width: 1
+            height: textItem.implicitHeight * 1.2
+            width: textItem.implicitWidth
+            color: "lightsteelblue"
             Text {
+                id: textItem
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: styleData.value
-                font.bold: true
+                elide: Text.ElideRight
+                renderType: Text.NativeRendering
             }
         }
         
@@ -45,12 +47,17 @@ Rectangle {
             role: "title"
             title: "Title"
             width: rootRect.width/2
+            movable: false
+            resizable: false
         }
         TableViewColumn {
             role: "author"
             title: "Author"
             width: rootRect.width/2
+            movable: false
+            resizable: false
         }
+
         model: libraryModel
     }
 
