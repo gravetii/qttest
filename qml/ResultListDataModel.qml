@@ -6,10 +6,14 @@ import QtQuick.Controls.Styles 1.4
 
 ListModel {
     id: resultListModel
-    ListElement {
-        file: "solee_bonkers.mp4"
-        size: "123M"
-        type: ".mp4"
-        path: "/Users/s0d01bw/Documents/diztl/share"
+    Component.onCompleted: {
+        resultListModel.append(
+            {
+                "file": "solee_bonkers123.mp4",
+                "size": "123M",
+                "type": ".mp4",
+                "path": "/Users/s0d01bw/Documents/diztl/share"
+            }
+        )
     }
 }
