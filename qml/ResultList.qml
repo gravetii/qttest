@@ -7,12 +7,18 @@ import QtQuick.Controls.Styles 1.4
 Rectangle {
     id: rootRect
     TableView {
+        id: resultListTableView
         anchors.fill: parent
         rowDelegate: Rectangle {
             color: "#D3D3D3"
             height: 30
             MouseArea {
                 anchors.fill: parent
+                onDoubleClicked: {
+                    console.log("table view row clicked...")
+                    // How to fetch the ListElement associated with the row
+                    // and return it for use by another module?
+                }
             }
         }
 
@@ -46,28 +52,28 @@ Rectangle {
         TableViewColumn {
             role: "file"
             title: "File"
-            width: rootRect.width * 0.3
+            width: resultListTableView.viewport.width * 0.3
             movable: false
             resizable: false
         }
         TableViewColumn {
             role: "type"
             title: "Type"
-            width: rootRect.width * 0.2
+            width: resultListTableView.viewport.width * 0.2
             movable: false
             resizable: false
         }
         TableViewColumn {
             role: "size"
             title: "Size"
-            width: rootRect.width * 0.2
+            width: resultListTableView.viewport.width * 0.2
             movable: false
             resizable: false
         }
         TableViewColumn {
             role: "path"
             title: "Path"
-            width: rootRect.width * 0.3
+            width: resultListTableView.viewport.width * 0.3
             movable: false
             resizable: false
         }
