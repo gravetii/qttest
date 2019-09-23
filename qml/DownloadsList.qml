@@ -11,8 +11,6 @@ Rectangle {
     TableView {
         id: downloadsListTableView
         anchors.fill: parent
-        // anchors.horizontalCenter: parent.horizontalCenter
-        // width: parent.width
         rowDelegate: Rectangle {
             color: "#D3D3D3"
             height: 30
@@ -49,35 +47,46 @@ Rectangle {
         }
 
         TableViewColumn {
+            role: "file"
             title: "File"
-            width: 200
-            horizontalAlignment: Text.AlignHCenter
+            width: downloadsListTableView.viewport.width/6
+            movable: false
+            resizable: false
         }
         TableViewColumn {
+            role: "status"
             title: "Status"
-            width: 200
-            horizontalAlignment: Text.AlignHCenter
+            width: downloadsListTableView.viewport.width/6
+            movable: false
+            resizable: false
         }
         TableViewColumn {
+            role: "progress"
             title: "Progress"
-            width: 200
-            horizontalAlignment: Text.AlignHCenter
+            width: downloadsListTableView.viewport.width/6
+            movable: false
+            resizable: false
         }
         TableViewColumn {
+            role: "size"
             title: "Size"
-            width: 200
-            horizontalAlignment: Text.AlignHCenter
+            width: downloadsListTableView.viewport.width/6
+            movable: false
+            resizable: false
         }
         TableViewColumn {
+            role: "type"
             title: "Type"
-            width: 200
-            horizontalAlignment: Text.AlignHCenter
+            width: downloadsListTableView.viewport.width/6
+            movable: false
+            resizable: false
         }
         TableViewColumn {
+            role: "path"
             title: "Path"
-            width: 200
-            horizontalAlignment: Text.AlignHCenter
+            width: downloadsListTableView.viewport.width/6
+            movable: false
+            resizable: false
         }
-
     }
 }
