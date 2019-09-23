@@ -5,13 +5,13 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 TabView {
-    tabPosition: Qt.BottomEdge
     style: TabViewStyle {
         tabOverlap: 1
         frameOverlap: 1
         tabBar: Rectangle {
             color: "#D3D3D3"
         }
+        tabPosition: Qt.BottomEdge
         tabsAlignment: Qt.AlignLeft
         tab: Rectangle {
             color: styleData.selected ? "steelblue" : "lightsteelblue"
