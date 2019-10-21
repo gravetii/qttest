@@ -9,7 +9,7 @@ ListModel {
     Component.onCompleted: {
         resultListModel.append(
             {
-                "file": "solee_bonkers123.mp4",
+                "file": "solee_bonkers.mp4",
                 "size": "123M",
                 "type": ".mp4",
                 "path": "/Users/s0d01bw/Documents/diztl/share"

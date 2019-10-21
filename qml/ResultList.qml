@@ -12,14 +12,6 @@ Rectangle {
         rowDelegate: Rectangle {
             color: "#D3D3D3"
             height: 30
-            MouseArea {
-                anchors.fill: parent
-                onDoubleClicked: {
-                    console.log("table view row clicked...")
-                    // How to fetch the ListElement associated with the row
-                    // and return it for use by another module?
-                }
-            }
         }
 
         itemDelegate: Rectangle {
@@ -79,5 +71,9 @@ Rectangle {
         }
 
         model: ResultListDataModel {}
+        onDoubleClicked: {
+            const element = model.get(row)
+            console.log("doubleclicked on: ", element.file)
+        }
     }
 }
