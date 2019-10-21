@@ -73,7 +73,7 @@ Rectangle {
         model: ResultListDataModel {}
         onDoubleClicked: {
             const element = model.get(row)
-            console.log("doubleclicked on: ", element.file)
+            console.log("Downloading file ", element.file, "of size", element.size)
         }
     }
 }
