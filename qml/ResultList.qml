@@ -9,38 +9,6 @@ Rectangle {
     TableView {
         id: resultListTableView
         anchors.fill: parent
-        rowDelegate: Rectangle {
-            color: "#D3D3D3"
-            height: 30
-        }
-
-        itemDelegate: Rectangle {
-            width: 100
-            height: 50
-            border.color: "#000000"
-            border.width: 1
-            Text {
-                id: textItem
-                text: styleData.value
-                anchors.fill: parent
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                elide: Text.ElideRight
-            }
-        }
-
-        headerDelegate: Rectangle {
-            height: textItem.implicitHeight * 1.2
-            width: textItem.implicitWidth
-            color: "lightsteelblue"
-            Text {
-                id: textItem
-                anchors.centerIn: parent
-                text: styleData.value
-                elide: Text.ElideRight
-            }
-        }
-        
         TableViewColumn {
             role: "file"
             title: "File"
@@ -68,6 +36,40 @@ Rectangle {
             width: resultListTableView.viewport.width * 0.3
             movable: false
             resizable: false
+        }
+
+        style: TableViewStyle {
+            rowDelegate: Rectangle {
+                color: "#D3D3D3"
+                height: 30
+            }
+
+            itemDelegate: Rectangle {
+                width: 100
+                height: 50
+                border.color: "#000000"
+                border.width: 1
+                Text {
+                    id: textItem
+                    text: styleData.value
+                    anchors.fill: parent
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    elide: Text.ElideRight
+                }
+            }
+
+            headerDelegate: Rectangle {
+                height: textItem.implicitHeight * 1.2
+                width: textItem.implicitWidth
+                color: "lightsteelblue"
+                Text {
+                    id: textItem
+                    anchors.centerIn: parent
+                    text: styleData.value
+                    elide: Text.ElideRight
+                }
+            }
         }
 
         model: ResultListDataModel {}
