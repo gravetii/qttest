@@ -50,7 +50,7 @@ Rectangle {
                 border.color: "#000000"
                 border.width: 1
                 Text {
-                    id: textItem
+                    id: itemText
                     text: styleData.value
                     anchors.fill: parent
                     verticalAlignment: Text.AlignVCenter
@@ -60,11 +60,11 @@ Rectangle {
             }
 
             headerDelegate: Rectangle {
-                height: textItem.implicitHeight * 1.2
-                width: textItem.implicitWidth
+                height: headerText.implicitHeight * 1.2
+                width: headerText.implicitWidth
                 color: "lightsteelblue"
                 Text {
-                    id: textItem
+                    id: headerText
                     anchors.centerIn: parent
                     text: styleData.value
                     elide: Text.ElideRight
