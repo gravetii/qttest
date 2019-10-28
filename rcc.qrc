@@ -1,6 +1,5 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource>
-<file>qml/DownloadsList.qml</file>
 <file>qml/FileSearch.qml</file>
 <file>qml/LogArea.qml</file>
 <file>qml/main.qml</file>

@@ -46,12 +46,4 @@ TabView {
             Layout.fillWidth: true
         }
     }
-    Tab {
-        id: downloadsListTab
-        title: "Downloads list"
-        DownloadsList {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-        }
-    }
 }
